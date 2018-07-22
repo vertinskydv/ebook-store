@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import Button from '@material-ui/core/Button';
+import IndexPage from './components/IndexPage';
 import './App.css';
 
 class App extends Component {
@@ -23,17 +25,14 @@ class App extends Component {
     return body;
   };
 
+  onLogInClick = (e) => {
+    debugger;
+
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          Server say: {this.state.response}
-        </p>
-      </div>
+      <IndexPage/>
     );
   }
 }
