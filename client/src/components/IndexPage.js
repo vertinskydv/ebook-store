@@ -32,9 +32,9 @@ export default class IndexPage extends(Component) {
         <div className={css(styles.typeWriterContainer)}>
           <span className={css(styles.typeWriter)}>{this.state.typeWriterText}</span>
         </div>
-        <div>
-          <Button>Sign In</Button>
-          <Button>Sign Up</Button>
+        <div className={css(styles.buttonContainer)}>
+          <Button className = {css(styles.button)}>Sign In</Button>
+          <Button className = {css(styles.button)}>Sign Up</Button>
         </div>
       </div>
     );
@@ -67,8 +67,9 @@ const styles = StyleSheet.create({
     marginTop: '200px',
     marginLeft: 'auto',
     marginRight: 'auto',
-    maxWidth: '600px'
-
+    maxWidth: '600px',
+    minHeight: '100px',
+    textAlign: 'center'
   },
   typeWriter: {
     color: 'white',
@@ -82,5 +83,15 @@ const styles = StyleSheet.create({
     animationIterationCount: 'infinite',
     animationTimingFunction: 'step-end',
   },
+  buttonContainer: {
+    display: 'flex',
+    justifyContent: 'space-around',
+    margin: '40px auto 0',
+    maxWidth: '200px'
+  },
+  button: {
+    color: 'white',
+    border: '1px solid white'
+  }
 });
 
